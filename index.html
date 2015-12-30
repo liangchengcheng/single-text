@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var xiaowang=(function(argument){
+            var  home=function(msg){
+                this.menling=msg;
+            };
+            var men;
+            var info={
+                sendMessage:function(msg){
+                    if(!men){
+                        men=new home(msg);
+                    };
+                    return men;
+                }
+            };
+            return info;
+        })();
+
+        var xiaoli={
+          callXiaoming:function(msg){
+              var  _xw=xiaowang.sendMessage(msg);
+              alert(_xw.menling);
+              _xw=null;
+          }
+        };
+        xiaoli.callXiaoming("diiddididiidi");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
